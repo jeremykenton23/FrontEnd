@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProfielPlus</title>
+    <title>ProfielPlus - Inloggen</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Welkom bij ProfielPlus</h1>
-<div id="login-form">
-    <h2>Inloggen</h2>
-    <form action="php/login.php" method="post">
-        <label for="username">Gebruikersnaam:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Wachtwoord:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Inloggen</button>
-    </form>
-    <p>Heb je nog geen account? <a href="register.html">Registreren</a></p>
-</div>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Registreren</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="login-section">
+        <div id="login-container">
+            <h1>Welkom bij ProfielPlus</h1>
+            <h2>Inloggen</h2>
+            <form action="php/login.php" method="post">
+                <label for="username">Gebruikersnaam:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Wachtwoord:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Inloggen</button>
+            </form>
+            <p>Heb je nog geen account? <a href="register.html">Registreren</a></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 ProfielPlus. Alle rechten voorbehouden.</p>
+</footer>
 </body>
 </html>

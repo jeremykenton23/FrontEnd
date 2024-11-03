@@ -1,23 +1,232 @@
+/* Algemene styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 60px; /* Zorg ervoor dat er voldoende ruimte is voor de footer */
+}
+
+/* Styling voor header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling voor main */
+main {
+    flex: 1;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-#login-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+/* Styling voor secties */
+#registration-section, #login-section, #edit-profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Ruimte tussen header en footer */
+    padding: 2rem 0; /* Extra ruimte voor ademruimte */
+    background-color: #f4f4f4; /* Zorgt voor een zachte achtergrondconsistentie */
+    border: 2px solid #007BFF; /* Enkele blauwe rand rond de sectie */
+    border-radius: 8px; /* Optioneel voor afgeronde hoeken */
+}
+
+/* Container voor registratie en login */
+#registration-container, #login-container, #edit-profile-container {
+    display: flex;
+    flex-direction: column; /* Zorgt voor een verticale indeling */
+    gap: 1rem; /* Ruimte tussen de elementen */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Kleiner kader voor een nettere uitstraling */
+    text-align: center;
+    margin: 0 auto;
 }
 
-input {
-    margin-bottom: 10px;
+/* Header in het formulier (registratie) */
+#registration-container h2,
+#login-container h2,
+#edit-profile-container h2 {
+    margin-bottom: 1.5rem; /* Iets meer ruimte onder de koptekst */
+    color: #007BFF; /* Consistente kleur met de rest van de pagina */
+    font-size: 1.6rem; /* Iets kleinere lettergrootte voor een strakkere koptekst */
+    font-weight: bold; /* Duidelijke, zichtbare koptekst */
+}
+
+/* Formuliervelden */
+#registration-container input,
+#login-container input,
+#edit-profile-container input,
+#edit-profile-container textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1.25rem; /* Iets meer ruimte tussen de velden */
+    width: 100%; /* Velden nemen de volledige breedte in */
+    box-sizing: border-box; /* Zorgt ervoor dat padding en border worden meegerekend */
+    font-size: 1rem; /* Consistente tekstgrootte */
+}
+
+/* Knoppen in het formulier */
+#registration-container button,
+#login-container button,
+#edit-profile-container button {
+    padding: 0.75rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Knop vult de breedte van de container */
+    font-size: 1rem; /* Consistente tekstgrootte */
+}
+
+/* Hover effect op de knop */
+#registration-container button:hover,
+#login-container button:hover,
+#edit-profile-container button:hover {
+    background-color: #0056b3; /* Donkerder blauw bij hover */
+}
+
+/* Tekst onder het formulier (bijvoorbeeld een link naar de login) */
+#registration-container p,
+#login-container p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Links onderaan het formulier (zoals 'Al een account?') */
+#registration-container a,
+#login-container a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#registration-container a:hover,
+#login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error en succes berichten styling */
+.success, .error {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem; /* Duidelijk leesbare tekst */
+}
+
+.success {
+    background-color: #28a745; /* Groene kleur voor succesmeldingen */
+}
+
+.error {
+    background-color: #dc3545; /* Rode kleur voor foutmeldingen */
+}
+
+/* Styling voor footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
     width: 100%;
-    padding: 8px;
+    position: relative;
+    bottom: 0;
+}
+
+/* Styling voor secties met prestaties, werkervaring, hobby's en persoonlijke gegevens */
+#school-performance, #work-experience, #hobbies, .personal-info {
+    display: flex;
+    flex-direction: column; /* Zorgt voor een verticale indeling */
+    gap: 1rem; /* Ruimte tussen de elementen */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #007BFF; /* Blauwe rand voor consistentie */
+    margin: 1rem 0; /* Ruimte tussen secties */
+}
+
+/* Sectietitels */
+#school-performance h2,
+#work-experience h2,
+#hobbies h2,
+.personal-info h2 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+/* Styling voor lijsten met items */
+.work-experience-list, .hobbies-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.work-experience-list div, .hobbies-list div {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #fafafa;
+}
+
+.work-experience-list div strong, .hobbies-list div strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.work-experience-list img, .hobbies-list img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Mobiele aanpassingen */
+@media (max-width: 768px) {
+    #registration-container, #login-container, #edit-profile-container {
+        padding: 1.5rem;
+        max-width: 90%; /* Zorgt ervoor dat het formulier ook op kleinere schermen goed zichtbaar blijft */
+    }
+
+    #registration-container h2, #login-container h2, #edit-profile-container h2 {
+        font-size: 1.4rem; /* Iets kleinere koptekst op mobiel */
+    }
 }
