@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Redirect naar de juiste pagina op basis van admin status
                 if ($user['is_admin']) {
                     // Admins worden doorgestuurd naar admin dashboard
-                    header('Location: ../admin.php');
+                    header('Location: ../php/admin.php');
                 } else {
                     // Normale gebruikers worden doorgestuurd naar hun profielpagina
                     header('Location: ../php/profile.php');
